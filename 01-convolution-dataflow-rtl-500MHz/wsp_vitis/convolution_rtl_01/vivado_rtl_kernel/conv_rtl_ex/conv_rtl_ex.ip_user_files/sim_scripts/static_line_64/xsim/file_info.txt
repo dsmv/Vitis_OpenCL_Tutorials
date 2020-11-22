@@ -1,0 +1,3 @@
+static_line.vhd,vhdl,xil_defaultlib,../../../../imports/ip_core/static_line_64/src/static_line.vhd,
+static_line_64.vhd,vhdl,xil_defaultlib,../../../../imports/ip_core/static_line_64/sim/static_line_64.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

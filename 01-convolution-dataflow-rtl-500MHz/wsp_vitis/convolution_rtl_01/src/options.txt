@@ -1,0 +1,1 @@
+--save-temps --user_ip_repo_path /xprj/vitis/project_ip    --jobs 4 --config ../src/freq.ini   --vivado.param project.writeIntermediateCheckpoints=1  --vivado.prop run.impl_1.strategy=Performance_ExplorePostRoutePhysOpt 

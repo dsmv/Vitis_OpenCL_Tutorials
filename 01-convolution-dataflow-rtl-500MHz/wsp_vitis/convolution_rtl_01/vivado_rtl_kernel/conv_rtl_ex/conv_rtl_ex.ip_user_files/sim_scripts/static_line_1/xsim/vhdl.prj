@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../../imports/ip_core/static_line_1/src/static_line.vhd" \
+"../../../../imports/ip_core/static_line_1/sim/static_line_1.vhd" \
+
+nosort
