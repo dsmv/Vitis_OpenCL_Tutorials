@@ -2,11 +2,11 @@
 
 ## Original project
 
-Xilinx have step by step tutorial for create acceliration core for Alveo board.
+Xilinx has a step-by-step guide on how to create an accelerating kernel for an Alveo board.
 
  https://github.com/Xilinx/Vitis-Tutorials/tree/master/Hardware_Accelerators/Design_Tutorials/01-convolution-tutorial
 
-There are some steps:
+There are several steps:
 * baseline
 * fixedpint
 * **dataflow**  - base for current project
@@ -19,7 +19,7 @@ The main acceleration function is video convolution.
 
 * resolution: 1920x1080
 * 132 frames
-* sorce video: 30 FPS
+* source video: 30 FPS
 * destination video: 25 FPS
 
 ## RTL kernel structure 
