@@ -18,7 +18,7 @@ The main acceleration function is video convolution.
 ![video](./video.png)
 
 * resolution: 1920x1080
-* 132 frames
+* 132 frames 
 * source video: 30 FPS
 * destination video: 25 FPS
 
