@@ -71,7 +71,7 @@ The main acceleration function is video convolution.
 ## Instructions
 
 * [Create HLS project](./doc/create_hls.md) 
-* [Create application project](./doc/create_app_project.md) 
+* [Create Vitis application project](./doc/create_app_project.md) 
 * [Create RTL kernel](./doc/create_rtl.md) 
 * [Build  application project](./doc/build_app_project.md) 
 * [Run example](./doc/run_example.md) 
