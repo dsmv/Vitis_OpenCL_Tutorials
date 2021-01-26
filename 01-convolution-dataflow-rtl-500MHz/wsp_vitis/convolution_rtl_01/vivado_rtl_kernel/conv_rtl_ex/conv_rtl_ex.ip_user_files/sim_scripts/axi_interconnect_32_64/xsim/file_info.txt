@@ -1,2 +1,0 @@
-axi_interconnect_32_64.v,verilog,xil_defaultlib,../../../../imports/ip_core/axi_interconnect_32_64/sim/axi_interconnect_32_64.v,
-glbl.v,Verilog,xil_defaultlib,glbl.v

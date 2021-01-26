@@ -1,4 +1,4 @@
-# Transform 300 MHZ HLS kernel to 500 MHz RTL kernel
+# Transform 300 MHz HLS kernel to 500 MHz RTL kernel
 
 ## Original project
 
@@ -15,7 +15,7 @@ There are several steps:
 
 The main acceleration function is video convolution.
 
-![video](./video.png)
+![video](./doc/video.png)
 
 * resolution: 1920x1080
 * 132 frames 
@@ -24,7 +24,7 @@ The main acceleration function is video convolution.
 
 ## RTL kernel structure 
 
-![struct](./struct.png)
+![struct](./doc/struct.png)
 
 * Vitis-HLS - original kernel
 * A1 - fsm component for translate control signal from 300 MHz to 500 MHz
@@ -52,11 +52,28 @@ The main acceleration function is video convolution.
 
 ## Results
 
-* [system_view](./system_view.md) 
-* [application timeline](./application_timeline.md)
-* [console_output](./console_output.md)
-* [fpga_utilization](./fpga_utilisation.md)
+* [system_view](./doc/system_view.md) 
+* [application timeline](./doc/application_timeline.md)
+* [console_output](./doc/console_output.md)
+* [fpga_utilization](./doc/fpga_utilisation.md)
 
+## Directories
+### top directory
+* doc - documentation
+* lab - place for laboratory 
+* reference - source code for laboratory
+### reference directory
+* conv_01 - source code for HLS project
+* conv_rtl - source code for RTL kernel
+* convolution_rtl_01 - source code for Vitis application project
+* project_ip - additional IP Core
 
+## Instructions
+
+* [Create HLS project](./doc/create_hls.md) 
+* [Create application project](./doc/create_app_project.md) 
+* [Create RTL kernel](./doc/create_rtl.md) 
+* [Build  application project](./doc/build_app_project.md) 
+* [Run example](./doc/run_example.md) 
 
 
