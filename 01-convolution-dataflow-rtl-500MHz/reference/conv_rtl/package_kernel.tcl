@@ -101,7 +101,7 @@ proc edit_core {core} {
   set field [ipx::add_field RESERVED_1 $reg]
     set_property ACCESS {read-only} $field
     set_property BIT_OFFSET {4} $field
-    set_property BIT_WIDTH {2} $field
+    set_property BIT_WIDTH {3} $field
     set_property DESCRIPTION {Reserved.  0s on read.} $field
     set_property READ_ACTION {modify} $field
   set field [ipx::add_field AUTO_RESTART $reg]
@@ -136,11 +136,11 @@ proc edit_core {core} {
   set_property address_offset 0x010 $reg
   set_property size           [expr {4*8}]   $reg
 
-  set reg      [::ipx::add_register -quiet "image_width" $addr_block]
+  set reg      [::ipx::add_register -quiet "img_width" $addr_block]
   set_property address_offset 0x018 $reg
   set_property size           [expr {4*8}]   $reg
 
-  set reg      [::ipx::add_register -quiet "image_height" $addr_block]
+  set reg      [::ipx::add_register -quiet "img_height" $addr_block]
   set_property address_offset 0x020 $reg
   set_property size           [expr {4*8}]   $reg
 
@@ -183,6 +183,7 @@ proc package_project {path_to_packaged kernel_vendor kernel_library kernel_name}
   edit_core $core
   ::ipx::update_checksums $core
   ::ipx::check_integrity -kernel $core
+  ::ipx::check_integrity -xrt $core
   ::ipx::save_core $core
   ::ipx::unload_core $core
   unset core
@@ -195,6 +196,7 @@ proc package_project_dcp {path_to_dcp path_to_packaged kernel_vendor kernel_libr
   edit_core $core
   ::ipx::update_checksums $core
   ::ipx::check_integrity -kernel $core
+  ::ipx::check_integrity -xrt $core
   ::ipx::save_core $core
   ::ipx::unload_core $core
   unset core
@@ -214,6 +216,7 @@ proc package_project_dcp_and_xdc {path_to_dcp path_to_xdc path_to_packaged kerne
   set_property used_in [list "implementation"] $xdcfile
   ::ipx::update_checksums $core
   ::ipx::check_integrity -kernel $core
+  ::ipx::check_integrity -xrt $core
   ::ipx::save_core $core
   ::ipx::unload_core $core
   unset core
