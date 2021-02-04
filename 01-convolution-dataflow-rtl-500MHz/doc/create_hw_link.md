@@ -14,3 +14,15 @@ You must see freq.ini and options.txt in the hw_link projects.
 ![hw_edit_options](./hw_edit_options.png)
 
 * Select "Hardware" for Active build configuration in the hw_link project page. Select "Build project" in the context menu for hw_link project. The binary_container_1.xclbin has been created. It takes several hours.
+
+* After buiild you can see such message in the console:
+
+![hw_console](./hw_console.png)
+
+* Open file "binary_container_1.xclbin.info in the convolution_rtl_01_system_hw_link/Hardware. Check values for clock:
+
+![hw_clock_info](./hw_clock_info.png)
+
+The values for clock must be 300 MHz and 500 MHz. It is very important.
+
+* Next step [Build  application project](./build_app_project.md) 
