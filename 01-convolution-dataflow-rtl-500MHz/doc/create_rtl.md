@@ -43,7 +43,7 @@
 
 ![rtl_ip_wizard.png](./rtl_ip_wizard.png)
 
-* In vivado open file conv_rtl_ooc.xdc, change period 3.333 for ap_clk and 2.000 for ap_clk_2. Add false path for ap_clk and ap_clk_2. You must get such file:
+* In vivado open file conv_rtl_ooc.xdc, change period 3.333 for ap_clk and 2.000 for ap_clk_2. Add false path for ap_clk and ap_clk_2. You must got such file:
 
         create_clock -period 3.333 [get_ports ap_clk]
         create_clock -period 2.000 [get_ports ap_clk_2]
@@ -52,7 +52,7 @@
 
     You can view result file into <path>/reference/conv_rtl
 
-* Open file <path>/lab/wsp_vitis/convolution_rtl_01_kernels/vivado_rtl_kernel/conv_rtl_ex/imports/package_kernel.tcl; If you open the file in the vivado project check that file is plcaed in the directory __import__.
+* Open file <path>/lab/wsp_vitis/convolution_rtl_01_kernels/vivado_rtl_kernel/conv_rtl_ex/imports/package_kernel.tcl; If you open the file in the vivado project then check that file is located in the directory __import__.
 * Find line 56: "set_property value 250000000 $clkbifparam"
 * Replace value for 300000000, it is value for ap_clk
 * Find line 65: "set_property value 250000000 $clkbifparam"
@@ -94,4 +94,10 @@
 
 * You can reopen rtl kernel project and regenerate RTL kernel if you need it
 
-* Next step: [Build  application project](./build_app_project.md) 
+* Select "convolution_rtl_01_kernels.prj". Press "Add Hardware Function" button;
+![rtl_add_function](./rtl_add_function.png)
+
+* Select "conv_rtl" function
+![rtl_select_function](./rtl_select_function.png)
+
+* Next step: [Create HW-Link project](./create_hw_link.md) 

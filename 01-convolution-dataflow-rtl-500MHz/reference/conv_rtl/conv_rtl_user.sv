@@ -86,8 +86,8 @@ module  conv_rtl_user
   input [63:0]                                   outFrame,
   input [63:0]                                   coefficient,
   input [31:0]                                   coefficient_size,
-  input [31:0]                                   image_width,
-  input [31:0]                                   image_height
+  input [31:0]                                   img_width,
+  input [31:0]                                   img_height
 
 );
 
@@ -271,14 +271,14 @@ static_line_32 resync_c_coefficient_size
 
 static_line_32 resync_c_img_width 
 (
-  .data_i       (   image_width     ),  
+  .data_i       (   img_width     ),  
   .data_o       (   c_img_width   ),
   .clk          (   ap_clk_2    )        
 ); 
 
 static_line_32 resync_c_img_hight 
 (
-  .data_i       (   image_height     ),  
+  .data_i       (   img_height     ),  
   .data_o       (   c_img_height   ),
   .clk          (   ap_clk_2    )        
 ); 

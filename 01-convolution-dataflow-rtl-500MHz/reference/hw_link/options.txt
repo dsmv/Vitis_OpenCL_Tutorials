@@ -1,0 +1,1 @@
+--save-temps --user_ip_repo_path /xprj/github/Vitis_OpenCL_Tutorials/01-convolution-dataflow-rtl-500MHz/lab/project_ip  --config ../freq.ini   --vivado.param project.writeIntermediateCheckpoints=1  --vivado.prop run.impl_1.strategy=Performance_ExplorePostRoutePhysOpt 
