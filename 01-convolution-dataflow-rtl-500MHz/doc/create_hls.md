@@ -6,7 +6,7 @@
 * launch :           vitis_hls &
 * launch "Create Project"
 * enter project name  __conv_01__
-* enter location:  __<path>/lab/wsp_hls__
+* enter location:  __'repo_patch'/lab/wsp_hls__
 
 ![new_hls_project](./new_hls_project.png)
 
@@ -22,6 +22,12 @@
 
 * copy files from  <path>/reference/conv_01/* to <path>/lab/wsp_hls/conv_01
 * add source files via contex menu of "Source", add all files from <path>/lab/wsp_hls/conv_01/src
+* please notes that 'convolve_fpga.cpp' has changes from original file. Add 'offset=direct' in the lines with interface description: 
+
+        #pragma HLS INTERFACE m_axi bundle=gmem1 port=inFrame offset=direct
+        #pragma HLS INTERFACE m_axi bundle=gmem2 port=outFrame offset=direct
+        #pragma HLS INTERFACE m_axi bundle=gmem3 port=coefficient offset=direct
+
 ![hls_add_files](./hls_add_files.png)
 * add testbecnh files via contex menu of "Test Becnh", add all files from <path>/lab/wsp_hls/conv_01/testbench
 * setup convolve_fpga as top function in "Project/Setting/Synthesis"

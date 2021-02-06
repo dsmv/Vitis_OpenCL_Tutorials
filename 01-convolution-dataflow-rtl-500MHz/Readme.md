@@ -66,6 +66,7 @@ The main acceleration function is video convolution.
 * conv_01 - source code for HLS project
 * conv_rtl - source code for RTL kernel
 * convolution_rtl_01 - source code for Vitis application project
+* hw_link - additional files for HW Link
 * project_ip - additional IP Core
 
 ## Instructions

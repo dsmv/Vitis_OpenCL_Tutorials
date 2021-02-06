@@ -5,7 +5,7 @@
 * enter workspace:  __<path>/lab/wsp_vitis__
 * launch "Create Application Project"
 * next page
-* select platform __xilinx_u200_xdma_201803_2__  (you must setup platfrom before launch)
+* select platform __xilinx_u200_xdma_201803_2__; You can select another platform if you need it
 * enter project name  __convolution_rtl_01__
 * select "Empty Application"
 * workspace was created, there are four projects into the workspace:

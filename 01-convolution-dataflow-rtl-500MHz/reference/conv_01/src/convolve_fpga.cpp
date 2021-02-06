@@ -111,9 +111,9 @@ extern "C"
                      const float* coefficient, int coefficient_size,
                      int img_width, int img_height)
   {
-#pragma HLS INTERFACE m_axi port=inFrame bundle=gmem1
-#pragma HLS INTERFACE m_axi port=outFrame bundle=gmem2
-#pragma HLS INTERFACE m_axi port=coefficient bundle=gmem3
+#pragma HLS INTERFACE m_axi bundle=gmem1 port=inFrame offset=direct
+#pragma HLS INTERFACE m_axi bundle=gmem2 port=outFrame offset=direct
+#pragma HLS INTERFACE m_axi bundle=gmem3 port=coefficient offset=direct
     int half = COEFFICIENT_SIZE / 2;
 
     hls::stream<RGBPixel> read_stream("read");
