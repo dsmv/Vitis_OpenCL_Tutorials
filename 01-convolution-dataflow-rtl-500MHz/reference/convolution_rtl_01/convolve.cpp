@@ -139,4 +139,6 @@ void convolve(FILE* streamIn, FILE* streamOut,
                   << (1920*1080*4*132) / fpga_duration.count() / (1024.0*1024.0)
                   << " MB/s" << std::endl;
      }
+     
+     fclose( streamOut ); 
 }

@@ -17,3 +17,4 @@
 
 ![run_result](./run_result.png)
 
+* Compare output.mp4 with 'repo_path'/reference/golden_data/golden_out_full.mp4; 

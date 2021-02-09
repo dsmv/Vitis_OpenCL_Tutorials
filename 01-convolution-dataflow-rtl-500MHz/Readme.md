@@ -19,8 +19,6 @@ The main acceleration function is video convolution.
 
 * resolution: 1920x1080
 * 132 frames 
-* source video: 30 FPS
-* destination video: 25 FPS
 
 ## RTL kernel structure 
 
@@ -31,24 +29,6 @@ The main acceleration function is video convolution.
 * inFrame, outFrame, coefficint - AXI interconnect from 32bit/500MHz to 64bit/300MHz
 * SLAVE AXI-LITE - component for decode function parameters and execution control
 
-## Workspaces
-
-* wsp_hls - for Vitis-HLS projects
-* wsp_vitis - for Vitis projects
-* project_ip - for Vivado IP cores
-
-## Vitis-HLS
-
-* conv_01 - project with original source core from Xilinx tutorial
-
-## Vitis
-
-* convolution_rtl_01 - Vitis project, Vivado RTL kernel project
-
-## project_ip
-
-* convolve_fpga - result of cov_01 project
-* static_line - additional component for translate static signal from one clock to another clock
 
 ## Results
 
@@ -68,6 +48,7 @@ The main acceleration function is video convolution.
 * convolution_rtl_01 - source code for Vitis application project
 * hw_link - additional files for HW Link
 * project_ip - additional IP Core
+* golden_data - results
 
 ## Instructions
 
@@ -76,6 +57,9 @@ The main acceleration function is video convolution.
 * [Create RTL kernel](./doc/create_rtl.md) 
 * [Create application project](./doc/create_app_project.md) 
 * [Create HW-Link project](./doc/create_hw_link.md) 
+* [Build system project](./doc/build_system_project.md) 
 * [Run example](./doc/run_example.md) 
 
+## Contact
 
+Dmitry Smekhov  dsmekhov@plis2.ru
