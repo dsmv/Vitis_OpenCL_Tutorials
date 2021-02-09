@@ -4,7 +4,7 @@
 
 ![host_import](./host_import.png)
 
-* Please note that convolve.cpp has changes in the arguments order
+* Please note that convolve.cpp has changes in the arguments order and close streamOut
 * Press "build" button
 
 
