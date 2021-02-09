@@ -23,15 +23,15 @@
 * Streaming interface - no streaming, next
 * Summury page:
 ![rtl_summury](./rtl_summury.png)
-* copy directory  <path>/reference/project_ip/static_line to <path>/lab/project_ip/
+* copy directory  'repo_path'/reference/project_ip/static_line to 'repo_path'/lab/project_ip/
 
-(Notes: you can copy others IP Core to <path>/lab/project_ip/) 
+(Notes: you can copy others IP Core to 'repo_path'/lab/project_ip/) 
 
-* Add path <path>/lab/project_ip as repositary path: Tools/Settings/IP/Reposytary
+* Add path 'repo_path'/lab/project_ip as repositary path: Tools/Settings/IP/Reposytary
 
 ![rtl_add_repository](./rtl_add_repository.png)
 
-* Add design source files (*.sv and *.xci) from <path>/reference/conv_rtl; Please notes that "Copy sources into project" checkbox is selected.
+* Add design source files (*.sv and *.xci) from 'repo_path'/reference/conv_rtl; Please notes that "Copy sources into project" checkbox is selected.
 
 ![rtl_add_files.png](./rtl_add_files.png)
 
@@ -50,15 +50,15 @@
         set_false_path  -from [get_clocs ap_clk] -to [get_clocks ap_clk_2]
         set_false_path  -from [get_clocs ap_clk_2] -to [get_clocks ap_clk]
 
-    You can view result file into <path>/reference/conv_rtl
+    You can view result file into 'repo_path'/reference/conv_rtl
 
-* Open file <path>/lab/wsp_vitis/convolution_rtl_01_kernels/vivado_rtl_kernel/conv_rtl_ex/imports/package_kernel.tcl; If you open the file in the vivado project then check that file is located in the directory __import__.
+* Open file 'repo_path'/lab/wsp_vitis/convolution_rtl_01_kernels/vivado_rtl_kernel/conv_rtl_ex/imports/package_kernel.tcl; If you open the file in the vivado project then check that file is located in the directory __import__.
 * Find line 56: "set_property value 250000000 $clkbifparam"
 * Replace value for 300000000, it is value for ap_clk
 * Find line 65: "set_property value 250000000 $clkbifparam"
 * Replace value for 500000000, it is value for ap_clk_2
 
-    You can view result file into <path>/reference/conv_rtl
+    You can view result file into 'repo_path'/reference/conv_rtl
 
 * Open conv_rtl.v into vivado
 * Find line 204: "conv_rtl_example #("
@@ -86,6 +86,10 @@
 
 ![rtl_hier](./rtl_hier.png)
 
+* If you selected another platform then you must launch "Upgrade Ip"
+
+* If you want you can run synthesis project
+
 * Launch "Generate RTL Kernel", check "Source-only kernel". Please notes, you can add .cpp files for Emulation-SW mode.
 
 ![rtl_generate](./rtl_generate.png)
@@ -100,4 +104,5 @@
 * Select "conv_rtl" function
 ![rtl_select_function](./rtl_select_function.png)
 
-* Next step: [Create HW-Link project](./create_hw_link.md) 
+
+* Next step: [Create application project](./create_app_project.md) 
